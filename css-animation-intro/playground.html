@@ -1,0 +1,105 @@
+<html>
+ <header>Intro to CSS Animation</header>
+    
+<style>
+
+    body{
+        background-color: cream;
+
+    }
+    
+    header{
+        text-align: center;
+        margin-top: 40px;
+        font-family: sans-serif
+    }
+    
+    
+   
+   #boxone{
+    background-color: lightpink;
+       padding: 30px;
+       width: 50px;
+       text-align: center;
+       margin-left: 19%;
+       margin-top: 50px;
+       font-family: sans-serif;
+       font-weight: bold;
+       color: white;
+       transition: 1.5s;
+       
+       
+    
+    }
+    
+    
+    
+    #boxtwo{
+        background-color: darkgreen;
+         padding: 30px;
+       width: 50px;
+       text-align: center;
+        margin-left: 46%;
+        margin-top: -113.5px;
+        font-family: sans-serif;
+       font-weight: bold;
+        color: white;
+        transition: 1s;
+    }
+    
+    
+    
+    
+    #boxthree{
+        background-color: coral;
+         padding: 30px;
+       width: 50px;
+       text-align: center;
+          margin-left: 68%;
+        margin-top: -113px;
+        font-family: sans-serif;
+       font-weight: bold;
+        color:white;
+        transition: 2s;
+    }
+    
+    
+    
+      #boxone:hover{
+        background-color: salmon;
+        transform: rotate(360deg)scale(70%);
+    }
+
+      #boxtwo:active{
+        background-color: darkseagreen;
+        transform:scale(200%);
+    }
+    
+      #boxthree:hover{
+        background-color:#FFD580;
+        transform:translateY(400px);
+        border-radius: 50%;
+        
+        
+    }
+    
+    
+    
+    
+    
+    </style>
+    
+    
+
+<div id="boxone">HOVER OVER HERE!</div>
+
+
+
+<div id="boxtwo">CLICK & HOLD</div>
+
+
+
+<div id="boxthree">HOVER HERE TOO</div>
+
+    
+</html>
