@@ -23,9 +23,7 @@
         fill: #fff;
       }
         
-    #lines{
-        background-color:black;
-        }
+   
         
         
     </style>
