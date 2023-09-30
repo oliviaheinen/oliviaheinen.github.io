@@ -3,15 +3,14 @@
   <defs>
     <style>
       
-        #flower{
-    
+        #pencil{
+        width: 20%;
         }
-        
-        
         
         
         .cls-1 {
         fill: #7b3722;
+        width: 10%;
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
@@ -55,11 +54,65 @@
       }
     
       
+        body{
+            width: 30%;
+            margin: auto;
+            margin-top: 15%;
+        }
       
+        #pencil{
+            animation: spin 4s linear infinite;
+            transform-origin: 276px 283px; 
+        }
       
+        @keyframes spin{
+            0%{ 
+               transform: rotate(0%)
+            }
+            50%{
+                transform: rotate(180deg)
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        
+        
+        #flower{
+            animation: spin 2s linear infinite;
+            transform-origin: 276px 279px;
+        }
       
+        @keyframes spin{
+            0%{ 
+               transform: rotate(0%)
+            }
+            50%{
+                transform: rotate(180deg)
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        
+        #ruler{
+            animation: spin 8s linear infinite;
+            transform-origin: 276px 279px;
+        }
       
-      
+        @keyframes spin{
+            0%{ 
+               transform: rotate(0%)
+            }
+            50%{
+                transform: rotate(-180deg)
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        
+        
       
       </style>
   </defs>
