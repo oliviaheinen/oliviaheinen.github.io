@@ -100,7 +100,7 @@
                 transition: all 2s ease-out;
               }
 
-              #data-01:active > #arrows-01{
+              #data-01:hover > #arrows-01{
                 transform: translateX(10px);
                 animation-delay: 2s;
               }
@@ -225,7 +225,7 @@
 
 
 
-              
+
 
 
               #bar-05{
@@ -1107,4 +1107,95 @@
       </div>
     </div>
   </body>
+
+
+
+
+
+<script>
+
+      // onClick Event Animation
+      document.getElementById("data-03").addEventListener('click', () => {
+        const isNavOpen = document.getElementById("bar-03").style.transform === 'scaleX(1)';
+        if (isNavOpen) {
+          closeNav03();
+        } else {
+          openNav03();
+        }
+      });
+
+      function closeNav03() {
+        document.getElementById("bar-03").style.transform = 'scaleX(0)';
+        document.getElementById("shadow-03").style.opacity = '0';
+        document.getElementById("arrows-03").style.transform = 'translateX(-100%)';
+      }
+
+      function openNav03() {
+        document.getElementById("bar-03").style.transform = 'scaleX(1)';
+        document.getElementById("shadow-03").style.opacity = '1';
+        document.getElementById("arrows-03").style.transform = 'translateX(0%)';
+      }
+
+      // Scroll Event Animation
+      const data04 = document.getElementById("data-04");
+      const bar04 = document.getElementById("bar-04");
+      const shadow04 = document.getElementById("shadow-04");
+      const arrows04 = document.getElementById("arrows-04");
+
+      window.addEventListener('scroll', () => {
+      const rect = data04.getBoundingClientRect();
+
+      if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        // element in view, trigger animation
+        document.getElementById("bar-04").style.transform = 'scaleX(1)';
+        document.getElementById("shadow-04").style.opacity = '1';
+        document.getElementById("arrows-04").style.transform = 'translateX(0%)';
+      } else {
+        // element out of view, close animation
+        document.getElementById("bar-04").style.transform = 'scaleX(0)';
+        document.getElementById("shadow-04").style.opacity = '0';
+        document.getElementById("arrows-04").style.transform = 'translateX(-100%)';
+      }
+    });
+
+      // Keypress Event Animation
+      const data05 = document.getElementById("data-05");
+      const bar05 = document.getElementById("bar-05");
+      const shadow05 = document.getElementById("shadow-05");
+      const arrows05 = document.getElementById("arrows-05");
+
+      document.addEventListener('keydown', () => {
+        const isNavOpen = bar05.style.transform === 'scaleX(1)';
+
+        if (event.keyCode == 13) {
+            if (isNavOpen) {
+            closeNav05();
+          } else {
+            openNav05();
+          }
+        }
+
+      });
+
+      function closeNav05() {
+        bar05.style.transform = 'scaleX(0)';
+        shadow05.style.opacity = '0';
+        arrows05.style.transform = 'translateX(-100%)';
+      }
+
+      function openNav05() {
+        bar05.style.transform = 'scaleX(1)';
+        shadow05.style.opacity = '1';
+        arrows05.style.transform = 'translateX(0%)';
+      }
+
+    
+
+
+
+
+
+
+</script>
+
 </html>
